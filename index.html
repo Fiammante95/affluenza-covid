@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Affluenza Covid</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+  </head>
+  <body>
+
+    <input type="text" id="search" placeholder="https://www.google.it/maps/place/CONAD+SUPERSTORE/@41.8779872,12.5294589,18.38z/data=!4m5!3m4!1s0x0:0x874fd6850db33bc2!8m2!3d41.8779752!4d12.5301003">
+
+    <div id = "results"></div>
+
+    <script>
+
+    $(document).ready(function(){
+
+        $.ajax({url: $("#search").text, success: function(result){
+          $("#results").html(result);
+
+      }});
+  });
+
+    </script>
+
+  </body>
+</html>
